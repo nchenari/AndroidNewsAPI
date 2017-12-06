@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "445962967898",
+    "firebase_url": "https://nima-news.firebaseio.com",
+    "project_id": "nima-news",
+    "storage_bucket": "nima-news.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445962967898:android:f4ba77b489a53188",
+        "android_client_info": {
+          "package_name": "com.nchenari.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445962967898-hnehgvfirruqpcljej2vvtr8qph9mbma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nchenari.news",
+            "certificate_hash": "1337211a5c0916c6df97e051b9dfada98e6b2b1e"
+          }
+        },
+        {
+          "client_id": "445962967898-ukr6hbudpuot989lcksivef2di1g93h4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDe5_C9QzJBnJ3A95up6fnTdUN3Ca-in0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445962967898-ukr6hbudpuot989lcksivef2di1g93h4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
