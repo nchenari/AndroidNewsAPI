@@ -13,6 +13,9 @@ import java.util.Date;
 public class DateUtils {
 
     public static String formatNewsApiDate(String inputDate) {
+        // check if input is null so that we don't get a NullPointerException
+        if(inputDate == null)
+            return null;
 
         try {
             String inputDateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'";

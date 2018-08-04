@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.nchenari.news.model.GetArticlesResponse;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView newsRecyclerView;
     private CoordinatorLayout coordinatorLayout;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
         newsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         coordinatorLayout = findViewById(R.id.activity_main);
+        progressBar = findViewById(R.id.activity_main_progressbar);
 
         Call<GetArticlesResponse> call = NewsAPI.getApi().getArticles();
         call.enqueue(new Callback<GetArticlesResponse>() {
             @Override
             public void onResponse(Call<GetArticlesResponse> call, Response<GetArticlesResponse> response) {
+                progressBar.setVisibility(View.GONE);
                 // First, give attribution to NewsAPi.org
                 showNewsApiSnackBar();
                 GetArticlesResponse getArticlesResponse = response.body();
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<GetArticlesResponse> call, Throwable t) {
-
+                progressBar.setVisibility(View.GONE);
                 Toast.makeText(MainActivity.this, "Error received", Toast.LENGTH_SHORT).show();
 
             }
